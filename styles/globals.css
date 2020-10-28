@@ -1,0 +1,258 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.headerStyle {
+  display: flex;
+  width: 100%;
+  height: 158px;
+  left: 0px;
+  top: 0px;
+  background: #fb7756;
+  position: fixed;
+  justify-content: center;
+  /* align-content: center; */
+  align-items: center;
+  flex-direction: column;
+}
+
+.headerStyle div {
+  font-weight: lighter;
+  font-size: 48px;
+  color: #ffffff;
+}
+
+.footerStyle {
+  display: flex;
+  width: auto;
+  height: 158px;
+  left: 0px;
+  top: 0px;
+  background: #fb7756;
+}
+
+.indexLocation {
+  display: flex;
+  flex-direction: column;
+  width: 1440px;
+  height: 707px;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+
+.indexLocationItem1 {
+  margin-top: 15rem;
+  width: 278px;
+  height: 39px;
+  border: 3px solid #e74645;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: lighter;
+  font-size: 24px;
+  color: #e74645;
+}
+.indexLocationItem2 {
+  margin-top: -6rem;
+  width: 278px;
+  height: 39px;
+  border: 3px solid #e74645;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: lighter;
+  font-size: 24px;
+  color: #e74645;
+}
+.indexLocationItem3 {
+  width: 278px;
+  height: 78px;
+  background: #e74645;
+  border: 10px solid #e74645;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0.35rem;
+  font-weight: lighter;
+  font-size: 24px;
+  color: #ffffff;
+}
+.indexLocationItem4 {
+  margin-top: -5rem;
+  margin-bottom: 3rem;
+  width: 278px;
+  height: 78px;
+  background: #ffa3a3;
+  border: 10px solid #ffa3a3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0.35rem;
+  font-weight: lighter;
+  font-size: 24px;
+  color: #e74645;
+}
+
+.registrationLocation {
+  display: flex;
+  flex-direction: column;
+  width: 1440px;
+  height: 707px;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+
+.registrationLocationItem1 {
+  margin-top: 15rem;
+  width: 278px;
+  height: 39px;
+  border: 3px solid #e74645;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: lighter;
+  font-size: 24px;
+  color: #e74645;
+}
+.registrationLocationItem2 {
+  margin-top: -9rem;
+  width: 278px;
+  height: 39px;
+  border: 3px solid #e74645;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: lighter;
+  font-size: 24px;
+  color: #e74645;
+}
+.registrationLocationItem3 {
+  margin-bottom: 8rem;
+  width: 278px;
+  height: 78px;
+  background: #e74645;
+  border: 10px solid #e74645;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0.35rem;
+  font-weight: lighter;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.planTrip {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  width: 1440px;
+  height: 707px;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+
+.planTripItem1 {
+  flex-wrap: nowrap;
+  margin-top: 2rem;
+  width: 278px;
+  height: 338px;
+  font-weight: lighter;
+  font-size: 36px;
+  color: #e74645;
+  background: #facd60;
+  border: 10px solid #facd60;
+}
+.planTripItem2 {
+  flex-wrap: nowrap;
+  margin-top: 2rem;
+  width: 278px;
+  height: 338px;
+  font-weight: lighter;
+  font-size: 36px;
+  color: #ffffff;
+  background: #e74645;
+  border: 10px solid #e74645;
+}
+.planTripItem3 {
+  flex-wrap: nowrap;
+  margin-top: 2rem;
+  width: 278px;
+  height: 338px;
+  font-weight: lighter;
+  font-size: 36px;
+  color: #e74645;
+  background: #fdfa66;
+  border: 10px solid #fdfa66;
+}
+.planTripItem4 {
+  flex-wrap: nowrap;
+  margin-top: 2rem;
+  width: 278px;
+  height: 338px;
+  font-weight: lighter;
+  font-size: 36px;
+  color: #ffffff;
+  background: #1ac0c6;
+  border: 10px solid #1ac0c6;
+}
+
+.planTripButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.planTripButton button {
+  flex-wrap: wrap;
+  width: 278px;
+  height: 78px;
+  background: #e74645;
+  border: 10px solid #e74645;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0.35rem;
+  font-weight: lighter;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.tripWishList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.tripWishList div {
+  margin-top: 170px;
+  width: 580px;
+  height: 61px;
+  font-size: 36px;
+  color: #ffffff;
+  background: #1ac0c6;
+  border: 10px solid #1ac0c6;
+  text-align: center;
+}
+
+.tripWishList div {
+  margin-top: 170px;
+  width: 580px;
+  height: 61px;
+  font-size: 36px;
+  color: #ffffff;
+  background: #1ac0c6;
+  border: 10px solid #1ac0c6;
+  text-align: center;
+}
+
+.tripWishListCities {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #fdfa66;
+  font-weight: lighter;
+  font-size: 24px;
+  color: #e74645;
+}
