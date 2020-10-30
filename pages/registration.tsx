@@ -68,6 +68,11 @@ export default function Registration(props: { token: string }) {
           />
           <button className="registrationLocationItem3"> Registration </button>
         </form>
+        <p style={{ color: 'red' }}>{errorMessage}</p>
+
+        {/* <Link href="/login">
+        <a>Login</a>
+      </Link> */}
       </main>
     </Layout>
   );
