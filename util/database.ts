@@ -98,3 +98,81 @@ export async function getUserBySessionToken(token: string | undefined) {
 
   return users.map((u) => camelcaseKeys(u))[0];
 }
+
+export async function getUserById(id: string) {
+  // Return undefined if the id is not
+  // in the correct format
+  if (!/^\d+$/.test(id)) return undefined;
+
+  const users = await sql`
+    SELECT * FROM users WHERE id = ${id};
+  `;
+
+  return users.map((u) => camelcaseKeys(u))[0];
+}
+
+export async function deleteUserById(id: string) {
+  // Return undefined if the id is not
+  // in the correct format
+  if (!/^\d+$/.test(id)) return undefined;
+
+  const users = await sql`
+    DELETE FROM users
+      WHERE id = ${id}
+      RETURNING *;
+  `;
+
+  return users.map((u) => camelcaseKeys(u))[0];
+}
+
+export async function updateUserById(id: string, user: User) {
+  // Return undefined if the id is not
+  // in the correct format
+  if (!/^\d+$/.test(id)) return undefined;
+
+  const allowedProperties = ['firstName', 'lastName', 'city'];
+  const userProperties = Object.keys(user);
+
+  if (userProperties.length < 1) {
+    return undefined;
+  }
+
+  const difference = userProperties.filter(
+    (prop) => !allowedProperties.includes(prop),
+  );
+
+  if (difference.length > 0) {
+    return undefined;
+  }
+
+  let users: User[] = [];
+
+  if ('firstName' in user) {
+    users = await sql`
+      UPDATE users
+        SET first_name = ${user.firstName}
+        WHERE id = ${id}
+        RETURNING *;
+    `;
+  }
+
+  if ('lastName' in user) {
+    users = await sql`
+      UPDATE users
+        SET last_name = ${user.lastName}
+        WHERE id = ${id}
+        RETURNING *;
+    `;
+  }
+
+  if ('city' in user) {
+    users = await sql`
+      UPDATE users
+        SET city = ${user.city}
+        WHERE id = ${id}
+        RETURNING *;
+    `;
+  }
+
+  return users.map((u) => camelcaseKeys(u))[0];
+}

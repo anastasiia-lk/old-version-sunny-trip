@@ -13,8 +13,8 @@ export default function Home(props: Props) {
       <Head>
         <title>Plan Trip</title>
       </Head>
-      <main>
-        <div>Hello</div>
+      <main className="indexPic">
+        <img src="/index.jpeg" alt="Girl on the beach" />
       </main>
     </Layout>
   );

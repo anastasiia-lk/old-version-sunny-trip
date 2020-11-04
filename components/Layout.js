@@ -10,7 +10,7 @@ export default function Layout(props) {
       </Head>
       <Header loggedIn={props.loggedIn} />
 
-      <main style={{ padding: 30 }}>{props.children}</main>
+      <main style={{ padding: 200 }}>{props.children}</main>
 
       <Footer />
     </>

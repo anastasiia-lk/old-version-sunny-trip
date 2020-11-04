@@ -20,48 +20,51 @@ export default function Login(props: Props) {
         <title>Sunny Trip</title>
       </Head>
       <main>
-        <form
-          onSubmit={async (e) => {
-            e.preventDefault();
+        <div className="indexLocation">
+          <form
+            className="indexLocation"
+            onSubmit={async (e) => {
+              e.preventDefault();
 
-            const response = await fetch('/api/login', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify({ username, password }),
-            });
+              const response = await fetch('/api/login', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username, password }),
+              });
 
-            const { success } = await response.json();
+              const { success } = await response.json();
 
-            if (!success) {
-              setErrorMessage('Login failed!');
-            } else {
-              setErrorMessage('');
-              router.push(props.redirectDestination);
-            }
-          }}
-        >
-          <input
-            className="indexLocationItem1"
-            type="text"
-            placeholder="Username"
-            value={username}
-            onChange={(e) => setUsername(e.currentTarget.value)}
-          />
-          <input
-            className="indexLocationItem2"
-            type="text"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.currentTarget.value)}
-          />
-          <button className="indexLocationItem3">Login</button>
-        </form>
-        <p style={{ color: 'red' }}>{errorMessage}</p>
-        <Link href="/registration">
-          <button className="indexLocationItem4">Registration</button>
-        </Link>
+              if (!success) {
+                setErrorMessage('Login failed!');
+              } else {
+                setErrorMessage('');
+                router.push(props.redirectDestination);
+              }
+            }}
+          >
+            <input
+              className="indexLocationItem1"
+              type="text"
+              placeholder="Username"
+              value={username}
+              onChange={(e) => setUsername(e.currentTarget.value)}
+            />
+            <input
+              className="indexLocationItem2"
+              type="text"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.currentTarget.value)}
+            />
+            <button className="indexLocationItem3">Login</button>
+          </form>
+          <p style={{ color: 'red' }}>{errorMessage}</p>
+          <Link href="/registration">
+            <button className="indexLocationItem4">Registration</button>
+          </Link>
+        </div>
       </main>
     </Layout>
   );

@@ -17,6 +17,7 @@ export default function Registration(props: { token: string }) {
       </Head>
       <main>
         <form
+          className="registrationLocation"
           onSubmit={async (e) => {
             // Prevent the default browser behavior of forms
             e.preventDefault();
